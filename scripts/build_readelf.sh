@@ -1,0 +1,3 @@
+/home/tb266/Documents/TortoiseFuzz/bb_metric/afl-clang-fast -DHAVE_CONFIG_H -I. -I../../binutils  -I. -I../../binutils -I../bfd -I../../binutils/../bfd -I../../binutils/../include -DLOCALEDIR="\"/usr/local/share/locale\"" -Dbin_dummy_emulation=bin_vanilla_emulation  -W -Wall -Wmissing-prototypes -Wshadow -flto -std=gnu99  -MT readelf_prot.o -MD -MP -MF .deps/readelf.Tpo -c -o readelf_prot.o ../../binutils/readelf_prot.c
+mv -f .deps/readelf.Tpo .deps/readelf.Po
+/bin/bash ./libtool --tag=CC   --mode=link /home/tb266/Documents/TortoiseFuzz/bb_metric/afl-clang-fast -W -Wall -Wmissing-prototypes -Wshadow -flto -std=gnu99   -flto -fuse-ld=gold  -o readelf_prot readelf_prot.o version.o unwind-ia64.o dwarf.o elfcomm.o  ../libiberty/libiberty.a -lz 
